@@ -26,7 +26,7 @@ public class VeryNiceGreeting {
 	@Override
 	public String toString() {
 		return "Greeting{" +
-				"message='" + name + '\'' +
+				"name='" + name + '\'' +
 				'}';
 	}
 }
