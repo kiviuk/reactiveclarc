@@ -6,27 +6,27 @@ package application.yellow;
  */
 public class VeryNiceGreeting {
 
-	private String message;
+	private String name;
 
 	public VeryNiceGreeting() {
 	}
 
-	public VeryNiceGreeting(String message) {
-		this.message = message;
+	public VeryNiceGreeting(String name) {
+		this.name = name;
 	}
 
 	public String getName() {
-		return this.message;
+		return this.name;
 	}
 
-	public void setMessage(String message) {
-		this.message = message;
+	public void setName(String name) {
+		this.name = name;
 	}
 
 	@Override
 	public String toString() {
 		return "Greeting{" +
-				"message='" + message + '\'' +
+				"message='" + name + '\'' +
 				'}';
 	}
 }
