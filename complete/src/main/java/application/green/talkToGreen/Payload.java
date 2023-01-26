@@ -1,5 +1,8 @@
 package application.green.talkToGreen;
 
+/**
+ * The PAYLOAD refers to the data that the Blue layer is able to process.
+ */
 public class Payload {
 	public Payload() {
 	}

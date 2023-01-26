@@ -3,6 +3,9 @@ package application.red.api;
 import application.red.TalkToGreen;
 import application.yellow.VeryNiceGreeting;
 
+/**
+ * The USE CASE implementation
+ */
 public class UseCaseImpl implements UseCaseApi {
 
     private final TalkToGreen talkToGreen;

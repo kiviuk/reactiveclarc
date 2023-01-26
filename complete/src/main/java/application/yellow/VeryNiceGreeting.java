@@ -1,5 +1,9 @@
 package application.yellow;
 
+
+/**
+ * Generic DOMAIN Entity
+ */
 public class VeryNiceGreeting {
 
 	private String message;

@@ -9,6 +9,9 @@ import org.springframework.web.reactive.function.BodyInserters;
 import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
+/**
+ * THe technical PRESENTER converts the data into an HTTP RESPONSE
+ */
 @Component
 @Scope("prototype")
 public class HttpSerializer implements TalkToBlue {

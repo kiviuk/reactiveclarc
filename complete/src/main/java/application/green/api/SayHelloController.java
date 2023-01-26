@@ -3,6 +3,9 @@ package application.green.api;
 import application.red.api.UseCaseApi;
 import application.yellow.VeryNiceGreeting;
 
+/**
+ * The Controller is responsible for managing the data flow into the red layer.
+ */
 public class SayHelloController implements SayHelloControllerApi {
 
     private final UseCaseApi useCaseApi;
