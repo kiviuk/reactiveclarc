@@ -1,6 +1,6 @@
-package red;
+package application.red;
 
-import yellow.VeryNiceGreeting;
+import application.yellow.VeryNiceGreeting;
 
 public interface TalkToGreen {
 

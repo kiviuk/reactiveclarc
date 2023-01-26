@@ -1,6 +1,6 @@
 package blue;
 
-import green.talkToGreen.Payload;
+import application.green.talkToGreen.Payload;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,13 +25,13 @@ public class VeryNiceGreetingEndpointTest {
 	public void testHello() {
 		webTestClient
 			// Create a GET request to test an endpoint
-			.get().uri("/blue")
+			.get().uri("/say/hello/Fred")
 			.accept(MediaType.APPLICATION_JSON)
 			.exchange()
 			// and use the dedicated DSL to test assertions against the response
 			.expectStatus().isOk()
 			.expectBody(Payload.class).value(greeting -> {
-				assertThat(greeting.getPayload()).isEqualTo("Fred!");
+				assertThat(greeting.getPayload()).isEqualTo("Hi Fred!");
 		});
 	}
 }

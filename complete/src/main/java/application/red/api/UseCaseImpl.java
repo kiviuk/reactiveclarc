@@ -1,7 +1,7 @@
-package red.api;
+package application.red.api;
 
-import red.TalkToGreen;
-import yellow.VeryNiceGreeting;
+import application.red.TalkToGreen;
+import application.yellow.VeryNiceGreeting;
 
 public class UseCaseImpl implements UseCaseApi {
 

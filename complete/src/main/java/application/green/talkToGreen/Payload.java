@@ -1,4 +1,4 @@
-package green.talkToGreen;
+package application.green.talkToGreen;
 
 public class Payload {
 	public Payload() {

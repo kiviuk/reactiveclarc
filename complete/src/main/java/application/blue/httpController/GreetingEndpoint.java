@@ -1,19 +1,19 @@
-package blue.httpController;
+package application.blue.httpController;
 
-import blue.talkToBlue.HttpSerializer;
-import green.TalkToBlue;
-import green.api.SayHelloController;
-import green.api.SayHelloControllerApi;
-import green.talkToGreen.GreetingsPresenter;
+import application.blue.talkToBlue.HttpSerializer;
+import application.red.TalkToGreen;
+import application.green.TalkToBlue;
+import application.green.api.SayHelloController;
+import application.green.api.SayHelloControllerApi;
+import application.green.talkToGreen.GreetingsPresenter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
 import org.springframework.web.reactive.function.server.RouterFunction;
 import org.springframework.web.reactive.function.server.RouterFunctions;
 import org.springframework.web.reactive.function.server.ServerResponse;
-import red.TalkToGreen;
-import red.api.UseCaseApi;
-import red.api.UseCaseImpl;
+import application.red.api.UseCaseApi;
+import application.red.api.UseCaseImpl;
 
 import static org.springframework.web.reactive.function.server.RequestPredicates.GET;
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
@@ -26,9 +26,9 @@ public class GreetingEndpoint {
 
         return RouterFunctions
             .route(
-                GET("/say/hello/{name}").and(accept(MediaType.TEXT_PLAIN))
+                GET("/say/hello/{n}").and(accept(MediaType.APPLICATION_JSON))
                 , request -> {
-                    String name = request.pathVariable("name");
+                    String name = request.pathVariable("n");
                     getSayHelloController(httpSerializer).sayHelloTo(name);
                     return httpSerializer.getHelloPayload();
                 }

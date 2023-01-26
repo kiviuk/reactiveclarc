@@ -1,4 +1,4 @@
-package yellow;
+package application.yellow;
 
 public class VeryNiceGreeting {
 

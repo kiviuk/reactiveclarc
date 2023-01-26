@@ -1,4 +1,4 @@
-package green.api;
+package application.green.api;
 
 public interface SayHelloControllerApi {
 

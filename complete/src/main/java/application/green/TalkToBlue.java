@@ -1,6 +1,6 @@
-package green;
+package application.green;
 
-import green.talkToGreen.Payload;
+import application.green.talkToGreen.Payload;
 
 public interface TalkToBlue {
 

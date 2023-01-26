@@ -1,8 +1,8 @@
-package green.talkToGreen;
+package application.green.talkToGreen;
 
-import green.TalkToBlue;
-import red.TalkToGreen;
-import yellow.VeryNiceGreeting;
+import application.green.TalkToBlue;
+import application.red.TalkToGreen;
+import application.yellow.VeryNiceGreeting;
 
 public class GreetingsPresenter implements TalkToGreen {
 

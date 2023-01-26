@@ -1,7 +1,7 @@
-package green.api;
+package application.green.api;
 
-import red.api.UseCaseApi;
-import yellow.VeryNiceGreeting;
+import application.red.api.UseCaseApi;
+import application.yellow.VeryNiceGreeting;
 
 public class SayHelloController implements SayHelloControllerApi {
 

@@ -1,7 +1,7 @@
-package blue.talkToBlue;
+package application.blue.talkToBlue;
 
-import green.TalkToBlue;
-import green.talkToGreen.Payload;
+import application.green.talkToGreen.Payload;
+import application.green.TalkToBlue;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;
@@ -23,7 +23,6 @@ public class HttpSerializer implements TalkToBlue {
     @Override
     public void setGreeting(Payload greets) {
         this.payloadGreets = greets;
-
     }
 
 }

@@ -1,6 +1,6 @@
-package red.api;
+package application.red.api;
 
-import yellow.VeryNiceGreeting;
+import application.yellow.VeryNiceGreeting;
 
 public interface UseCaseApi {
 
