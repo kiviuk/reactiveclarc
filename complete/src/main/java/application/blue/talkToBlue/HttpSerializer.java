@@ -1,6 +1,6 @@
 package application.blue.talkToBlue;
 
-import application.green.talkToGreen.Payload;
+import application.green.talkToGreen.Content;
 import application.green.TalkToBlue;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.MediaType;
@@ -17,7 +17,7 @@ import reactor.core.publisher.Mono;
 @Scope("prototype")
 public class HttpSerializer implements TalkToBlue {
 
-    private Payload payloadGreets;
+    private PayloadDTO payloadGreets;
 
     public Mono<ServerResponse> getHelloPayload() {
         return ServerResponse.ok().contentType(MediaType.APPLICATION_JSON)
@@ -25,8 +25,8 @@ public class HttpSerializer implements TalkToBlue {
     }
 
     @Override
-    public void setGreeting(Payload greets) {
-        this.payloadGreets = greets;
+    public void setContent(Content greets) {
+        this.payloadGreets = new PayloadDTO(greets.getContent());
     }
 
 }

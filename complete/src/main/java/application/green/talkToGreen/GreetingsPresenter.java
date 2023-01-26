@@ -23,7 +23,7 @@ public class GreetingsPresenter implements TalkToGreen {
      */
     @Override
     public void format(VeryNiceGreeting who) {
-        Payload payload = new Payload(who.getName());
-        talkToBlue.setGreeting(payload);
+        Content content = new Content(who.getName());
+        talkToBlue.setContent(content);
     }
 }

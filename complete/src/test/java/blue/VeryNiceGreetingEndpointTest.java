@@ -1,16 +1,20 @@
 package blue;
 
-import application.green.talkToGreen.Payload;
+import application.blue.talkToBlue.PayloadDTO;
+import application.green.talkToGreen.Content;
+import boot.Application;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.http.MediaType;
+import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 import org.springframework.test.web.reactive.server.WebTestClient;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+@ContextConfiguration(classes = Application.class)
 @ExtendWith(SpringExtension.class)
 //  We create a `@SpringBootTest`, starting an actual server on a `RANDOM_PORT`
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
@@ -30,8 +34,8 @@ public class VeryNiceGreetingEndpointTest {
 			.exchange()
 			// and use the dedicated DSL to test assertions against the response
 			.expectStatus().isOk()
-			.expectBody(Payload.class).value(greeting -> {
-				assertThat(greeting.getPayload()).isEqualTo("Hi Fred!");
+			.expectBody(PayloadDTO.class).value(payload -> {
+				assertThat(payload.getData()).isEqualTo("Hi Fred!");
 		});
 	}
 }

@@ -1,6 +1,7 @@
 package boot;
 
-import application.green.talkToGreen.Payload;
+import application.blue.talkToBlue.PayloadDTO;
+import application.green.talkToGreen.Content;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
@@ -35,9 +36,8 @@ public class Application {
         public Mono<String> getMessage() {
             return this.client.get().uri("/say/hello/Fred").accept(MediaType.APPLICATION_JSON)
                               .retrieve()
-                              .bodyToMono(Payload.class)
-                              .map(Payload::getPayload)
-                ;
+                              .bodyToMono(PayloadDTO.class)
+                              .map(PayloadDTO::getData);
         }
 
     }
