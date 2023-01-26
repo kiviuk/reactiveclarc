@@ -1,5 +1,6 @@
-package hello;
+package blue;
 
+import green.talkToGreen.Payload;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +14,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 @ExtendWith(SpringExtension.class)
 //  We create a `@SpringBootTest`, starting an actual server on a `RANDOM_PORT`
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT)
-public class GreetingRouterTest {
+public class VeryNiceGreetingEndpointTest {
 
 	// Spring Boot will create a `WebTestClient` for you,
 	// already configure and ready to issue requests against "localhost:RANDOM_PORT"
@@ -24,13 +25,13 @@ public class GreetingRouterTest {
 	public void testHello() {
 		webTestClient
 			// Create a GET request to test an endpoint
-			.get().uri("/hello")
+			.get().uri("/blue")
 			.accept(MediaType.APPLICATION_JSON)
 			.exchange()
 			// and use the dedicated DSL to test assertions against the response
 			.expectStatus().isOk()
-			.expectBody(Greeting.class).value(greeting -> {
-				assertThat(greeting.getMessage()).isEqualTo("Hello, Spring!");
+			.expectBody(Payload.class).value(greeting -> {
+				assertThat(greeting.getPayload()).isEqualTo("Fred!");
 		});
 	}
 }

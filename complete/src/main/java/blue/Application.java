@@ -1,5 +1,6 @@
-package hello;
+package blue;
 
+import blue.client.GreetingClient;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;

@@ -1,18 +1,17 @@
-package hello;
+package yellow;
 
-
-public class Greeting {
+public class VeryNiceGreeting {
 
 	private String message;
 
-	public Greeting() {
+	public VeryNiceGreeting() {
 	}
 
-	public Greeting(String message) {
+	public VeryNiceGreeting(String message) {
 		this.message = message;
 	}
 
-	public String getMessage() {
+	public String getName() {
 		return this.message;
 	}
 
