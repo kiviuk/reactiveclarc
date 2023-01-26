@@ -25,8 +25,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 public class GreetingEndpoint {
 
     /**
-     * The method, "route", sets up a routing function that maps incoming HTTP GET requests to the path "/say/hello/{n}" and
-     * with an "Accept" header of "application/json" to a specific behavior.
+     * The method, "route", sets up a routing function that maps incoming HTTP GET requests to the path "/say/hello/{n}".
      * Inside the method, it extracts the "n" variable from the path variable and uses it to call the "sayHelloTo" method
      * on an instance of the "SayHelloControllerApi" class.
      * The "httpSerializer.getHelloPayload()" method is called to get the response payload.
@@ -61,7 +60,7 @@ public class GreetingEndpoint {
      */
     private static SayHelloControllerApi getSayHelloController(TalkToBlue talkToBlue) {
         TalkToGreen talkToGreen = new GreetingsPresenter(talkToBlue);
-        UseCaseApi useCaseApi = new UseCaseImpl(talkToGreen);
-        return new SayHelloController(useCaseApi);
+        UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
+        return new SayHelloController(talkToUseCase);
     }
 }

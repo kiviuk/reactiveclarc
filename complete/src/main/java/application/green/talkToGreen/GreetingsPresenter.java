@@ -5,7 +5,8 @@ import application.red.TalkToGreen;
 import application.yellow.VeryNiceGreeting;
 
 /**
- * The Presenter is responsible for handling the flow of data back into the Blue layer
+ * RED LAYER = DATA LAYER
+ * The Presenter is responsible for handling the flow of DATA back into the Blue layer
  */
 public class GreetingsPresenter implements TalkToGreen {
 
@@ -15,6 +16,11 @@ public class GreetingsPresenter implements TalkToGreen {
         this.talkToBlue = talkToBlue;
     }
 
+    /**
+     * The GreetingsPresenter converts a domain entity into a payload object and ensures that the presenter
+     * in the TECHNICAL layer receives the data in the correct format.
+     * @param who
+     */
     @Override
     public void format(VeryNiceGreeting who) {
         Payload payload = new Payload(who.getName());

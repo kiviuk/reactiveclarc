@@ -10,7 +10,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 /**
- * THe technical PRESENTER converts the data into an HTTP RESPONSE
+ * THe technical PRESENTER converts the payload data into the final HTTP RESPONSE
  */
 @Component
 @Scope("prototype")

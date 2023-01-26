@@ -4,7 +4,8 @@ import application.red.api.UseCaseApi;
 import application.yellow.VeryNiceGreeting;
 
 /**
- * The Controller is responsible for managing the data flow into the red layer.
+ * RED LAYER = DATA LAYER
+ * The SayHelloController is responsible for managing the data flow into the red layer.
  */
 public class SayHelloController implements SayHelloControllerApi {
 
@@ -14,6 +15,12 @@ public class SayHelloController implements SayHelloControllerApi {
         this.useCaseApi = useCaseApi;
     }
 
+    /**
+     * The SayHelloController ensures that the LOGIC layer's Use Case
+     * is provided with consistent and validated DATA.
+     *
+     * @param who
+     */
     @Override
     public void sayHelloTo(String who) {
 
