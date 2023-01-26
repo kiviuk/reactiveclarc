@@ -5,7 +5,7 @@ import application.red.TalkToGreen;
 import application.yellow.VeryNiceGreeting;
 
 /**
- * RED LAYER = DATA LAYER
+ * GREEN LAYER = DATA LAYER
  * The Presenter is responsible for handling the flow of DATA back into the Blue layer
  */
 public class GreetingsPresenter implements TalkToGreen {

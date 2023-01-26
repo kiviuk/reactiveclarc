@@ -19,6 +19,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
 /**
+ * BLUE LAYER = technical LAYER
  * The technical ENDPOINT Controller manages all incoming HTTP Requests.
  */
 @Configuration(proxyBeanMethods = false)

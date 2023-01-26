@@ -10,6 +10,7 @@ import org.springframework.web.reactive.function.server.ServerResponse;
 import reactor.core.publisher.Mono;
 
 /**
+ * BLUE LAYER = technical LAYER
  * THe technical PRESENTER converts the payload data into the final HTTP RESPONSE
  */
 @Component
