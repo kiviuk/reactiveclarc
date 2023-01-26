@@ -62,6 +62,9 @@ public class GreetingEndpoint {
     private static SayHelloControllerApi getSayHelloController(TalkToBlue talkToBlue) {
         TalkToGreen talkToGreen = new GreetingsPresenter(talkToBlue);
         UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
+
+        // new SayHelloController(new UseCaseImpl(new GreetingsPresenter(talkToBlue)));
+
         return new SayHelloController(talkToUseCase);
     }
 }
