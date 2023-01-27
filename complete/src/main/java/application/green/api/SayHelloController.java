@@ -4,7 +4,7 @@ import application.red.api.UseCaseApi;
 import application.yellow.VeryNiceGreeting;
 
 /**
- * GREEN LAYER = DATA LAYER
+ * GREEN LAYER = DATA TEAM
  * The SayHelloController is responsible for managing the data flow into the red layer.
  */
 public class SayHelloController implements SayHelloControllerApi {

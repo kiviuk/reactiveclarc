@@ -19,7 +19,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
 /**
- * BLUE LAYER = technical LAYER
+ * BLUE LAYER = ENGINEERING TEAM
  * The technical ENDPOINT Controller manages all incoming HTTP Requests.
  */
 @Configuration(proxyBeanMethods = false)
@@ -60,6 +60,10 @@ public class GreetingEndpoint {
      * @return
      */
     private static SayHelloControllerApi getSayHelloController(TalkToBlue talkToBlue) {
+
+        // poor man's factory method which can be further
+        // abstracted through the abstract factory pattern
+
         TalkToGreen talkToGreen = new GreetingsPresenter(talkToBlue);
         UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
 
