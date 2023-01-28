@@ -4,7 +4,7 @@ import application.red.TalkToGreen;
 import application.yellow.VeryNiceGreeting;
 
 /**
- * RED LAYER = LOGIC LAYER
+ * RED LAYER = TEAM KNOW-HOW
  * The USE CASE implementation of the Business LOGIC
  */
 public class UseCaseImpl implements UseCaseApi {

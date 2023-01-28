@@ -4,8 +4,8 @@ import application.blue.talkToBlue.HttpSerializer;
 import application.blue.talkToBlue.ResultStash;
 import application.red.TalkToGreen;
 import application.green.TalkToBlue;
-import application.green.api.SayHelloController;
-import application.green.api.SayHelloControllerApi;
+import application.green.api.SayHelloControllerImpl;
+import application.green.api.ControllerApi;
 import application.green.talkToGreen.GreetingsPresenter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -61,7 +61,7 @@ public class GreetingEndpoint {
      * @param resultStash
      * @return
      */
-    private static SayHelloControllerApi getSayHelloController(TalkToBlue resultStash) {
+    private static ControllerApi getSayHelloController(TalkToBlue resultStash) {
 
         // poor man's factory method that can be improved by using the abstract factory pattern
 
@@ -70,6 +70,6 @@ public class GreetingEndpoint {
 
         // new SayHelloController(new UseCaseImpl(new GreetingsPresenter(resultStash)));
 
-        return new SayHelloController(talkToUseCase);
+        return new SayHelloControllerImpl(talkToUseCase);
     }
 }
