@@ -57,8 +57,11 @@ public class GreetingEndpoint {
         TalkToGreen talkToGreen = new Greeter(resultStash);
         UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
 
-        // new SayHelloController(new UseCaseImpl(new Greeter(resultStash)));
+        // new SayHelloControllerImpl(new UseCaseImpl(new Greeter(resultStash)));
 
         return new SayHelloControllerImpl(talkToUseCase);
     }
+
+    // Branching model; IO-representation, Data-representation, UseCase-Representation, Domain-Representation
+    //                      B            x        G            x        R             x            Y
 }
