@@ -1,12 +1,11 @@
 package application.blue.httpController;
 
-import application.blue.talkToBlue.HttpSerializer;
-import application.blue.talkToBlue.ResultStash;
+import application.blue.talkToBlueImpl.ResultStash;
 import application.red.TalkToGreen;
 import application.green.TalkToBlue;
 import application.green.api.SayHelloControllerImpl;
 import application.green.api.ControllerApi;
-import application.green.talkToGreen.GreetingsPresenter;
+import application.green.talkToGreenImpl.GreetingsPresenter;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.MediaType;
@@ -20,7 +19,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
 /**
- * BLUE LAYER = ENGINEERING TEAM are the "IO-Workers", they are the experts on how to "IO"
+ * BLUE LAYER = ENGINEERING TEAM, they are the "IO-Workers", the experts on "how to do IO"
  * The technical ENDPOINT Controller manages all incoming HTTP Requests.
  */
 @Configuration(proxyBeanMethods = false)

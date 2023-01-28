@@ -1,7 +1,6 @@
 package blue;
 
-import application.blue.talkToBlue.PayloadDTO;
-import application.green.talkToGreen.Content;
+import application.blue.talkToBlueImpl.PayloadDTO;
 import boot.Application;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;

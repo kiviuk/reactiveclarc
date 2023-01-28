@@ -1,4 +1,4 @@
-package application.green.talkToGreen;
+package application.green.talkToGreenImpl;
 
 /**
  * The Content refers to the data that the Blue layer is able to process.

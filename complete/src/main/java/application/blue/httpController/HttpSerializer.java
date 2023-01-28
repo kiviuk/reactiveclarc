@@ -1,5 +1,6 @@
-package application.blue.talkToBlue;
+package application.blue.httpController;
 
+import application.blue.talkToBlueImpl.ResultStash;
 import org.springframework.context.annotation.Scope;
 import org.springframework.http.MediaType;
 import org.springframework.stereotype.Component;

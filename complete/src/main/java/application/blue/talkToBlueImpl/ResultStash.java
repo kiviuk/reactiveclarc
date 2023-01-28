@@ -1,7 +1,7 @@
-package application.blue.talkToBlue;
+package application.blue.talkToBlueImpl;
 
 import application.green.TalkToBlue;
-import application.green.talkToGreen.Content;
+import application.green.talkToGreenImpl.Content;
 
 public class ResultStash implements TalkToBlue {
 

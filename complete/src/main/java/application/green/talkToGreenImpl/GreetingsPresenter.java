@@ -1,4 +1,4 @@
-package application.green.talkToGreen;
+package application.green.talkToGreenImpl;
 
 import application.green.TalkToBlue;
 import application.red.TalkToGreen;

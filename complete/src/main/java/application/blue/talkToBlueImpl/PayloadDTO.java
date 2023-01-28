@@ -1,4 +1,4 @@
-package application.blue.talkToBlue;
+package application.blue.talkToBlueImpl;
 
 public class PayloadDTO {
 

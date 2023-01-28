@@ -1,7 +1,6 @@
 package boot;
 
-import application.blue.talkToBlue.PayloadDTO;
-import application.green.talkToGreen.Content;
+import application.blue.talkToBlueImpl.PayloadDTO;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ConfigurableApplicationContext;
