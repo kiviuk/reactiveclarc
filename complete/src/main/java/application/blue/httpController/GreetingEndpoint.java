@@ -63,8 +63,7 @@ public class GreetingEndpoint {
      */
     private static SayHelloControllerApi getSayHelloController(TalkToBlue resultStash) {
 
-        // poor man's factory method which can be further
-        // abstracted through the abstract factory pattern
+        // poor man's factory method that can be improved by using the abstract factory pattern
 
         TalkToGreen talkToGreen = new GreetingsPresenter(resultStash);
         UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
