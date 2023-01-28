@@ -49,17 +49,7 @@ public class GreetingEndpoint {
             );
     }
 
-    /**
-     * The method "buildSayHelloController" is responsible for connecting the different layers of the application.
-     * It takes in an implementation of the technical PRESENTER (HttpSerializer) which allows the GreetingsPresenter
-     * in the green layer to communicate. The Use Case in the red layer is passed the Presenter of the green layer,
-     * which implements the TalkToGreen api.
-     * Finally, the Controller in the green layer receives the Use Case which implements the Use Case API.
-     * The method returns an instance of the SayHelloControllerApi class.
-     *
-     * @param resultStash
-     * @return
-     */
+
     private static ControllerApi buildSayHelloController(TalkToBlue resultStash) {
 
         // poor man's factory method that can be improved by using the abstract factory pattern
