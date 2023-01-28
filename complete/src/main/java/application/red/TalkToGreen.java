@@ -8,6 +8,6 @@ import application.yellow.VeryNiceGreeting;
  */
 public interface TalkToGreen {
 
-    void format(VeryNiceGreeting who);
+    void sendGrettings(VeryNiceGreeting who);
 
 }

@@ -18,7 +18,7 @@ public class UseCaseImpl implements UseCaseApi {
     @Override
     public void beNiceTo(VeryNiceGreeting who) {
         String newGreeting = "Hi " + who.getName() + "!";
-        talkToGreen.format(new VeryNiceGreeting(newGreeting));
+        talkToGreen.sendGrettings(new VeryNiceGreeting(newGreeting));
     }
 
 }
