@@ -1,6 +1,7 @@
 package application.blue.httpController;
 
 import application.blue.talkToBlue.HttpSerializer;
+import application.blue.talkToBlue.ResultStash;
 import application.red.TalkToGreen;
 import application.green.TalkToBlue;
 import application.green.api.SayHelloController;
@@ -29,7 +30,7 @@ public class GreetingEndpoint {
      * The method, "route", sets up a routing function that maps incoming HTTP GET requests to the path "/say/hello/{n}".
      * Inside the method, it extracts the "n" variable from the path variable and uses it to call the "sayHelloTo" method
      * on an instance of the "SayHelloControllerApi" class.
-     * The "httpSerializer.getHelloPayload()" method is called to get the response payload.
+     * The "httpSerializer.serialize()" method is called to get the response payload.
      *
      * @param httpSerializer
      * @return
@@ -42,8 +43,9 @@ public class GreetingEndpoint {
                 GET("/say/hello/{n}").and(accept(MediaType.APPLICATION_JSON))
                 , request -> {
                     String name = request.pathVariable("n");
-                    getSayHelloController(httpSerializer).sayHelloTo(name);
-                    return httpSerializer.getHelloPayload();
+                    ResultStash resultStash = new ResultStash();
+                    getSayHelloController(resultStash).sayHelloTo(name);
+                    return httpSerializer.serialize(resultStash);
                 }
             );
     }
@@ -56,18 +58,18 @@ public class GreetingEndpoint {
      * Finally, the Controller in the green layer receives the Use Case which implements the Use Case API.
      * The method returns an instance of the SayHelloControllerApi class.
      *
-     * @param talkToBlue
+     * @param resultStash
      * @return
      */
-    private static SayHelloControllerApi getSayHelloController(TalkToBlue talkToBlue) {
+    private static SayHelloControllerApi getSayHelloController(TalkToBlue resultStash) {
 
         // poor man's factory method which can be further
         // abstracted through the abstract factory pattern
 
-        TalkToGreen talkToGreen = new GreetingsPresenter(talkToBlue);
+        TalkToGreen talkToGreen = new GreetingsPresenter(resultStash);
         UseCaseApi talkToUseCase = new UseCaseImpl(talkToGreen);
 
-        // new SayHelloController(new UseCaseImpl(new GreetingsPresenter(talkToBlue)));
+        // new SayHelloController(new UseCaseImpl(new GreetingsPresenter(resultStash)));
 
         return new SayHelloController(talkToUseCase);
     }
