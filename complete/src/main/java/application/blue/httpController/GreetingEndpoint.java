@@ -19,7 +19,7 @@ import static org.springframework.web.reactive.function.server.RequestPredicates
 import static org.springframework.web.reactive.function.server.RequestPredicates.accept;
 
 /**
- * BLUE LAYER = ENGINEERING TEAM
+ * BLUE LAYER = ENGINEERING TEAM are the "IO-Workers", they are the experts on how to "IO"
  * The technical ENDPOINT Controller manages all incoming HTTP Requests.
  */
 @Configuration(proxyBeanMethods = false)
