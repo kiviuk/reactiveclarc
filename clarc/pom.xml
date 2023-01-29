@@ -9,7 +9,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.example</groupId>
-	<artifactId>reactive-rest-service-complete</artifactId>
+	<artifactId>clarc</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>reactive-rest-service-complete</name>
 	<description>Demo project for Spring Boot</description>
